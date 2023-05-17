@@ -1,0 +1,32 @@
+# Binary and output folder
+bin/
+obj/
+
+# Compilation files
+*.exe
+*.dll
+*.pdb
+*.dll.config
+
+# Publish folder
+publish/
+
+# Visual Studio generated files
+.vs/
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.nuget/
+
+# Rider generated files
+.idea/
+
+# Log files
+*.log
+
+# Other files and folders to ignore
+*.bak
+*.bak2
+*.bak3
+*.swp
