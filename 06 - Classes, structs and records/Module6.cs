@@ -1,4 +1,8 @@
-﻿namespace CSharpCourse._06___Classes__structs_and_records
+﻿/*
+ * Namespaces  
+ * Are a way to organize our types like classes, enums, etc... 
+*/
+namespace CSharpCourse._06___Classes__structs_and_records
 {
     public class Module6
     {
