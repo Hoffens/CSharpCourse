@@ -41,6 +41,9 @@ namespace CSharpCourse._06___Classes__structs_and_records
             Console.WriteLine("Creating Module6...");
             Name = name;
             LastName = lastName;
+
+            /* We combine the class PartialClass of different files into one class! */
+            PartialClass myPartialClass = new() { Name = name, LastName = lastName };
         }
 
         /*
@@ -61,5 +64,28 @@ namespace CSharpCourse._06___Classes__structs_and_records
          * Changing the orders of parameters too
         */
         public void ChangeName() => Name = "Overloading";
+
+    }
+
+    /*
+     *  Partial classes
+     *  Allow us to "combine" classes with the same name that are in different files
+     *  Classes must be in the same namespaces
+    */
+    public partial class PartialClass 
+    {
+        public string LastName { get; set; }
+    }
+
+    /*
+     * Structs
+     * Are data types that allow us to organize different variables in one object.
+     * Structs are value types, meanwhile classes are referenced types.
+     * This improves performance
+    */
+
+    public struct MyStruct  /* My instances are value types! */
+    {
+        public int Id { get; set; }
     }
 }
