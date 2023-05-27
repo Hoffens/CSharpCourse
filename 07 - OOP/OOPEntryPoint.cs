@@ -1,30 +1,27 @@
 ﻿namespace CSharpCourse._07___OOP.Inheritance
 {
-    internal class InheritanceEntryPoint
+    internal class OOPEntryPoint
     {
-        public InheritanceEntryPoint()
+        public OOPEntryPoint()
         {
             // Car object has access to properties of the class Vehicle
-            Car car = new()
+            Car car = new("BMW")
             {
-                Brand = "BMW",
                 CreationYear = 2023
             };
             car.TurnOnRadio();
             car.Reverse();
 
             // Truck object has access to properties of the class Vehicle
-            Truck truck = new()
+            Truck truck = new("Iveco")
             {
-                Brand = "Iveco",
                 CreationYear = 2022
             };
             truck.Reverse();
 
             // Bicycle object has access to properties of the class Vehicle
-            Bicycle bicycle = new()
+            Bicycle bicycle = new("Scott")
             {
-                Brand = "Scott",
                 CreationYear = 2020,
             };
             bicycle.Reverse();

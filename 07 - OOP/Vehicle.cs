@@ -1,6 +1,12 @@
 ﻿namespace CSharpCourse._07___OOP.Inheritance
 {
+    // All classes inherited from Object
     // Base class. Is an abstract class, it means that cannot have instances
+    // Limits of Inheritance!!
+    /*
+     * 1- A class can't be inherited by more than one class at the same time.
+     * 2- Inheritance could make a software difficult to mantain.
+    */
     internal abstract class Vehicle
     {
         public string? Brand { get; set; }
@@ -11,7 +17,16 @@
          * Each MaxSpeed is different in the vehicles, so here we are
          * saying that each class must implement the property MaxSpeed
         */
-        public abstract int MaxSpeed { get; }
+    public abstract int MaxSpeed { get; }
+
+        /*
+         * All classes that inherited from Vehicle must use the constructor 
+         * (if it has params) of the base class
+        */
+        public Vehicle(string brand)
+        {
+            Brand = brand;
+        }
 
         /*
          *  Virtual keyword allow the inherited classes of vehicle to
@@ -53,6 +68,10 @@
     // Class Car inherited the properties of Vehicle
     internal class Car : Vehicle
     {
+        public Car(string brand) : base(brand)
+        {
+        }
+
         // Implementing MaxSpeed property of the Vehicle abstract class
         public override int MaxSpeed => 120;
 
@@ -71,6 +90,10 @@
     // Class Truck inherited the properties of Vehicle
     internal class Truck : Vehicle
     {
+        public Truck(string brand) : base(brand)
+        {
+        }
+
         // Implementing MaxSpeed property of the Vehicle abstract class
         public override int MaxSpeed => 80;
 
@@ -91,6 +114,10 @@
 
     internal class Bicycle : Vehicle
     {
+        public Bicycle(string brand) : base(brand)
+        {
+        }
+
         // Implementing MaxSpeed property of the Vehicle abstract class
         public override int MaxSpeed => 15;
 
@@ -98,5 +125,15 @@
         {
             Console.WriteLine("Tirin");
         }
+    }
+
+    /*
+     * Sealed class. Can't be inherited
+     * It improves performance a little bit, thanks to the way that .NET
+     * organizes virtual methods
+    */
+    internal sealed class CantBeInherited
+    {
+
     }
 }

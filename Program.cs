@@ -5,4 +5,4 @@
 
 using CSharpCourse._07___OOP.Inheritance;
 
-InheritanceEntryPoint inheritanceEntryPoint = new();
+OOPEntryPoint OOPEntryPoint = new();
