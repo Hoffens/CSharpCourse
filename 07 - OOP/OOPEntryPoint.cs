@@ -36,9 +36,9 @@
              * Polymorphism
              * ReadBrand accepts car, truck and bicycle objects because they ARE vehicles.
             */
-            ReadBrand(car);
-            ReadBrand(truck);
-            ReadBrand(bicycle);
+            ReadBrand(vehicle: car);
+            ReadBrand(vehicle: truck);
+            ReadBrand(vehicle: bicycle);
         }
     }
 }

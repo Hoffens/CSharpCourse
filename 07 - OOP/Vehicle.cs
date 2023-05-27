@@ -7,6 +7,7 @@
      * 1- A class can't be inherited by more than one class at the same time.
      * 2- Inheritance could make a software difficult to mantain.
     */
+    // Access modifiers https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
     internal abstract class Vehicle
     {
         public string? Brand { get; set; }
